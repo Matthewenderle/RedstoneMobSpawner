@@ -19,12 +19,15 @@ The purpose of this plugin allows a player to place a redstone block inside the 
 Command |	Description	| Permission
 -------- | ----------- | -----------
 /rsms mobs | Show the main help screen | rsms.mobs
-/rsms list | Displays all Redstone Mobspawners. | rsms.list
-/rsms create | Changes a regular spawner into a redstone enabled one. | rsms.create
-/rsms info | Provides information on the Mob Spawner in view. | rsms.info
-/rsms remove | Forces to player to teleport to the region's warp point. | rsms.remove
-/rsms setmob <MOB_NAME> | Forces the plugin to get new data from the config file. | rsms.setmob
+/rsms list | Displays all Redstone Mobspawners | rsms.list
+/rsms create | Changes a regular spawner into a redstone enabled one | rsms.create
+/rsms info | Provides information on the Mob Spawner in view | rsms.info
+/rsms remove | Removes the Redstone from the spawner in view | rsms.remove
+/rsms remove <UUID> | Removes the Redstone from the spawner identified by the UUID | rsms.removeremote
+/rsms setmob <MOB_NAME> | Forces the plugin to get new data from the config file | rsms.setmob
  
+Players have the ability tp change the mob type using the /rsms setmob <mobtype> but they need the permissions for that mob. For example to change it to a Wandering Traveler they need rsms.setmob.wandering_traveler.
+
 # Features
 * Control Mob Spawners with Redstone
 * Change Mob type
@@ -37,6 +40,15 @@ Command |	Description	| Permission
 * None found
 
 # Changelog
-* Version 0.0.1 (Current)
+* Version 1.0 (Current)
+* Built on Spigot-1.16.1
+* Fixed falling Armor Stands if the block below the spawner was removed or not present
+* Fixed the issue with accidentally placing armor or items on the stand and not being able to remove them.
+* Fixed bug where Redstone Block is left on the spawner
+* Added 1.16 Mobs
+* Added ability to charge players a set amount of Redstone block(s), and also a refund when deactivated.
+* Removed manually set permissions. Permissions per mob type now follow rsms.setmob.<MOBNAME> under Mobs in the config file.
+
+* Version 0.0.1
 * Built on CraftBukkit-1.12.2
 * Release

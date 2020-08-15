@@ -1,0 +1,9 @@
+name: RedstoneMobSpawner
+main: io.enderle.rsms.Main
+version: 1.0
+description: RedstoneMobSpawner allows controlling mobspawners via redstone.
+api-version: 1.16
+commands:
+  redstonems:
+    aliases: rsms
+    description: 'Allows you to interact with the RedstoneMobSpawner plugin.'
